@@ -1,0 +1,93 @@
+
+// VARIABLES 
+$theme : #15002c;
+$sky :   #17ECF7;
+
+@font-face {
+  font-family: cairo;
+  src: url(../font/Cairo-Regular.ttf);
+}
+@font-face {
+  font-family: cairo_medium;
+  src: url(../font/Cairo-Medium.ttf);
+}
+@font-face {
+  font-family: cairo_light;
+  src: url(../font/Cairo-Light.ttf);
+}
+@font-face {
+  font-family: cairo_semibold;
+  src: url(../font/Cairo-SemiBold.ttf);
+}
+@font-face {
+  font-family: cairo_bold;
+  src: url(../font/Cairo-Bold.ttf);
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  background: $theme;
+  color: white;
+  font-family: cairo;
+  // position: relative;
+  // overflow: hidden;
+  // &::after {
+  //   position: absolute;
+  //   top: -200px;
+  //   right: -180px;
+  //   content: "";
+  //   width: 800px;
+  //   height: 800px;
+  //   background-image: url(../images/effects_light.svg);
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  //   background-position: left center;
+  // }
+}
+body,* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,ol {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,p,span {
+  margin-bottom: 0;
+}
+.fw-lighter {
+  font-family: cairo_light;
+}
+.fw-light {
+  font-family: cairo_medium;
+}
+.fw-bold {
+  font-family: cairo_semibold;
+}
+.fw-bolder {
+  font-family: cairo_bold;
+}
+.text-info {
+  color: $sky;
+}
+.text-lg { font-size: 5rem;}
+
+.btn__line {
+  border: 2px solid greenyellow;
+  border-radius: 1rem;
+  width: 40px;
+  padding: 5px 0px;
+  margin: 10px 0px;
+}
+// BANNER 
+.banner {
+  &__logo {
+    width: 25rem;
+  }
+}
