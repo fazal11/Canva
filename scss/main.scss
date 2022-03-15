@@ -2,6 +2,8 @@
 // VARIABLES 
 $theme : #15002c;
 $sky :   #17ECF7;
+$black :  #13002a;
+$light_purple :  #7e758b;
 
 @font-face {
   font-family: cairo;
@@ -67,6 +69,9 @@ a {
 h1,h2,h3,h4,h5,h6,p,span {
   margin-bottom: 0;
 }
+.rounded-1 {
+  border-radius: .6rem !important;
+}
 .fw-lighter {
   font-family: cairo_light;
 }
@@ -84,6 +89,9 @@ h1,h2,h3,h4,h5,h6,p,span {
 }
 .bg-info {
   background-color: $sky;
+}
+.text-warning {
+  color: $light_purple !important;
 }
 .text-lg { 
   font-size: 5rem;
@@ -108,11 +116,38 @@ h1,h2,h3,h4,h5,h6,p,span {
 .display-5 {
   font-size: 2.5rem;
 }
+.display-4 {
+  font-size: 4rem;
+}
 .mb-6 {
   margin-bottom: 8rem;
 }
+.px-7 {
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+.shadow_sky {
+  box-shadow: rgba($sky, 0.8) 0px 0px 12px;
+}
+.text-black {
+  color: $black;
+}
 .move {
   width: 5rem;
+}
+.w-fit {
+  width: fit-content;
+}
+.mini_text {
+  font-size: 2.5rem;
+}
+.px-6 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.comments_img {
+  width: 13rem;
+  margin-top: -5rem;
 }
 // BANNER 
 .banner {
@@ -128,9 +163,90 @@ h1,h2,h3,h4,h5,h6,p,span {
 // package 
 .package {
   &__frame {
-    height: 55rem;
+    height: 50rem;
     iframe {
       border-radius: 5px;
+    }
+  }
+  &__logo {
+    width: 35rem;
+  }
+  &__prize > h4 {
+    span {
+      font-size: 2.6rem;
+    }
+  }
+  &__7 {
+    width: 100rem;
+    img {
+      width: 90rem;
+    }
+  }
+  &_row {
+
+  }
+  &_col {
+    width: 18.2rem;
+    text-align: center;
+    margin-right: 6rem;
+    margin-top: -4rem;
+  }
+  &_col_3 {
+    width: 20rem;
+    text-align: center;
+    margin-top: -4rem;
+  }
+  &_col_2 {
+    width: 25rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+// template 
+.template {
+  &__img {
+    width: 86%;
+    margin: auto;
+  }
+}
+.tip__list {
+  ul {
+    li {
+      position: relative;
+      margin-left: 6rem;
+      margin-bottom: 5px;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -22px;
+        transform: translate(0%,-50%);
+        content: "";
+        background-image: url(../images/red_tip.svg);
+        background-repeat: no-repeat;
+        background-size: 1.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+}
+.tip {
+  &__layout {
+    border: 1px solid white;
+    padding: 2rem 3rem;
+    border-radius: 1.4rem;
+    .line_blue {
+      height: 2px;
+      width: 100%;
+      background-color: $sky;
+      border-radius: 5px;
+    }
+    .tab {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 2px solid $sky;
+      margin-right: 10px;
     }
   }
 }
@@ -144,6 +260,129 @@ h1,h2,h3,h4,h5,h6,p,span {
 
 
 
+.chats {
+  .owl-item {
+    // height: 71rem;
+  }
+  .owl-nav {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    margin-top: 0 !important;
+    button {
+      margin: 0px 20px !important;
+      width: 6rem !important;
+      height: 6rem !important;
+      overflow: hidden;
+      border-radius: 50% !important;
+      position: relative;
+      background-color: transparent !important;
+      border: 1px solid white !important;
+
+
+      span {
+        position: absolute;
+        top: -15%;
+        width: 6rem !important;
+        height: 6rem !important;
+        padding: 0px 20px !important;
+        display: flex !important;
+        align-items:  center !important;
+        justify-content: center !important;
+        font-family: cairo_light !important;
+      font-size: 60px !important;
+
+      }
+    }
+  }
+}
+
+.info {
+  &__card {
+    width: 25rem;
+  }
+  &__img {
+    text-align: center;
+  }
+  &__content {
+    text-align: center;
+  }
+}
+.filter {
+  &__search {
+    padding: 1.5rem 3rem;
+    border: 3px solid $sky !important;
+    font-size: 2rem;
+    font-family: cairo_medium;
+    background-color: transparent !important;
+    color: $sky !important;
+    &::placeholder {
+      color: $light_purple !important;
+    }
+  }
+  &__layout {
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-50%,-50%);
+    width: 2.5rem;
+  }
+  &__item {
+    p {
+      padding: 4px 0px;
+      width: 100%;
+    }
+  }
+  &__lists {
+    display: grid;
+    grid-template-columns: 23rem 23rem 23rem 23rem;
+    justify-content: space-between;
+    @include media__max(1200){
+      grid-template-columns: 23rem 23rem 23rem;
+    }
+    @include media__max(767){
+      grid-template-columns: 23rem 23rem;
+    }
+    @include media__max(500){
+      overflow: hidden;
+    }
+  }
+}
+.faqs {
+  .accordion-item,
+  .accordion-header button {
+    background-color: $theme !important;
+  }
+  .accordion-header button {
+    font-size: 3rem;
+    color: white;
+    border: 3px solid $sky;
+    border-radius: 1.5rem !important;
+    padding-left: 4rem;
+    &:focus {
+      box-shadow: none;
+    }
+    &::after {
+      background-image: url(../images/down.png) !important;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-size: 2.5rem;
+    }
+  }
+  .accordion-item {
+    margin-bottom: 1rem;
+  }
+  .accordion-body {
+    margin: 2rem 0rem;
+    font-size: 1.8rem;
+    color: white;
+  }
+}
+
+
 //  ALL MEDIA 
 @include media__max(991){
   .banner__ceo {
@@ -152,5 +391,77 @@ h1,h2,h3,h4,h5,h6,p,span {
   }
   .move {
     margin: auto;
+  }
+  .info__card {
+    width: 20rem;
+  }
+  .package__7 {
+    width: 70rem;
+    img {
+      width: 60rem;
+    }
+  }
+  .package_col {
+    width: 15rem;
+    margin-right: 2rem;
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  .package_col_2 {
+    width: 15rem;
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  .package_col_3 {
+    width: 13rem;
+    p {
+      font-size: 1.5rem;
+    }
+    div {
+      font-size: 1.3rem;
+
+    }
+  }
+}
+@include media__max(991){
+  .package__frame {
+    height: 35rem;
+  }
+}
+@include media__max(700){
+  .package__7 {
+    display: none;
+  }
+}
+@include media__max(767){
+  .info__card {
+    margin: 2rem auto;
+  }
+  .nav {
+    background-color: #130028;
+  }
+  .banner__ceo {
+    width: 65vw;
+  }
+  .package__prizing  {
+    .btn {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
+  .tip__layout {
+    border: none;
+  }
+  .info {
+    .mobo {
+      margin-bottom: 10px !important;
+    }
+  }
+}
+@include media__max(600){
+  body {
+    padding: 0px 13px;
   }
 }
