@@ -23,6 +23,11 @@ $sky :   #17ECF7;
   font-family: cairo_bold;
   src: url(../font/Cairo-Bold.ttf);
 }
+@mixin media__max($value:0,$unit:px) {
+  @media only screen and (max-width:$value + $unit) {
+    @content;
+  }
+}
 html {
   font-size: 10px;
 }
@@ -50,6 +55,7 @@ body,* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: cairo;
 }
 ul,ol {
   margin: 0;
@@ -76,18 +82,75 @@ h1,h2,h3,h4,h5,h6,p,span {
 .text-info {
   color: $sky;
 }
-.text-lg { font-size: 5rem;}
+.bg-info {
+  background-color: $sky;
+}
+.text-lg { 
+  font-size: 5rem;
+  @include media__max(1400){
+    font-size: 4rem;
+  }
+  @include media__max(1200){
+    font-size: 3.5rem;
+  }
+}
 
 .btn__line {
-  border: 2px solid greenyellow;
+  border: 2px solid $sky;
   border-radius: 1rem;
   width: 40px;
-  padding: 5px 0px;
+  padding: 4px 0px;
   margin: 10px 0px;
+}
+.display-6 {
+  font-size: 2rem;
+}
+.display-5 {
+  font-size: 2.5rem;
+}
+.mb-6 {
+  margin-bottom: 8rem;
+}
+.move {
+  width: 5rem;
 }
 // BANNER 
 .banner {
   &__logo {
     width: 25rem;
+  }
+  &__ceo {
+    width: 45vw;
+    // width: 85rem;
+    margin-left: -3rem;
+  }
+}
+// package 
+.package {
+  &__frame {
+    height: 55rem;
+    iframe {
+      border-radius: 5px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+//  ALL MEDIA 
+@include media__max(991){
+  .banner__ceo {
+    width: 60vw;
+    margin: 3rem auto;
+  }
+  .move {
+    margin: auto;
   }
 }
