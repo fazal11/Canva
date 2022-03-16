@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 .filter__item p {
   padding: 4px 0px;
   width: 100%;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
   position: relative; }
   .filter__item p::before {
     position: absolute;
