@@ -33,6 +33,24 @@ body, * {
           box-sizing: border-box;
   font-family: cairo; }
 
+* {
+  /* Style the scrollbar handle */
+  scrollbar-width: thin !important;
+  -webkit-scrollbar-width: thin !important;
+  scrollbar-color: #00ffff #15002c !important;
+  -webkit-scrollbar-color: #15002c !important; }
+  * ::-webkit-scrollbar {
+    background: #15002c;
+    width: 7px !important; }
+  * ::-webkit-scrollbar-thumb {
+    background: #00ffff; }
+  * ::-webkit-scrollbar-track-piece {
+    width: 10px; }
+  * ::-webkit-scrollbar-corner {
+    background: #00ffff; }
+  * ::-webkit-scrollbar:horizontal {
+    display: none; }
+
 ul, ol {
   margin: 0;
   padding: 0; }
@@ -531,5 +549,7 @@ footer {
   .mt-99 {
     margin-top: 5rem; }
   .display-6 {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .mb-6 {
+    margin-bottom: 2rem; } }
 /*# sourceMappingURL=main.css.map */
