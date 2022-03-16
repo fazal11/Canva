@@ -1,7 +1,10 @@
 
 // VARIABLES 
 $theme : #15002c;
-$sky :   #17ECF7;
+$sky :   #00ffff;
+// $sky :   #17ecf7;
+// $sky : darken(,10);
+
 $black :  #13002a;
 $light_purple :  #7e758b;
 
@@ -38,6 +41,7 @@ body {
   background: $theme;
   color: white;
   font-family: cairo;
+  // color: darken($sky,10);
   // position: relative;
   // overflow: hidden;
   // &::after {
@@ -94,7 +98,7 @@ h1,h2,h3,h4,h5,h6,p,span {
   color: $light_purple !important;
 }
 .text-lg { 
-  font-size: 5rem;
+  font-size: 4.8rem;
   @include media__max(1400){
     font-size: 4rem;
   }
@@ -119,18 +123,24 @@ h1,h2,h3,h4,h5,h6,p,span {
 .display-4 {
   font-size: 4rem;
 }
+.font_base {
+  font-size: 1.7rem;
+}
 .mb-6 {
   margin-bottom: 8rem;
 }
 .px-7 {
-  padding-left: 12rem;
-  padding-right: 12rem;
+  padding-left: 17.5rem;
+  padding-right: 17.5rem;
 }
 .shadow_sky {
-  box-shadow: rgba($sky, 0.8) 0px 0px 12px;
+  box-shadow: rgba($sky, 0.6) 0px 0px 12px;
 }
 .text-black {
   color: $black;
+}
+.bg-black {
+  background-color: $black !important;
 }
 .move {
   width: 5rem;
@@ -148,6 +158,16 @@ h1,h2,h3,h4,h5,h6,p,span {
 .comments_img {
   width: 13rem;
   margin-top: -5rem;
+}
+.mb-99 {
+  margin-bottom: 7.5rem;
+}
+.pb-99 {
+  padding-bottom: 7.5rem;
+}
+
+.mb-65 {
+  margin-bottom: 6.5rem;
 }
 // BANNER 
 .banner {
@@ -230,6 +250,12 @@ h1,h2,h3,h4,h5,h6,p,span {
     }
   }
 }
+.tip__list--green {
+  @extend .tip__list;
+  ul>li::before {
+    background-image: url(../images/green_tip.svg);
+  }
+}
 .tip {
   &__layout {
     border: 1px solid white;
@@ -242,11 +268,11 @@ h1,h2,h3,h4,h5,h6,p,span {
       border-radius: 5px;
     }
     .tab {
-      width: 3rem;
-      height: 3rem;
+      width: 2.3rem;
+      height: 2.3rem;
       border-radius: 50%;
       border: 2px solid $sky;
-      margin-right: 10px;
+      margin-right: 8px;
     }
   }
 }
@@ -261,9 +287,9 @@ h1,h2,h3,h4,h5,h6,p,span {
 
 
 .chats {
-  .owl-item {
-    // height: 71rem;
-  }
+  // .owl-item {
+  //   // height: 71rem;
+  // }
   .owl-nav {
     position: absolute;
     top: -100px;
@@ -271,8 +297,8 @@ h1,h2,h3,h4,h5,h6,p,span {
     margin-top: 0 !important;
     button {
       margin: 0px 20px !important;
-      width: 6rem !important;
-      height: 6rem !important;
+      width: 3.5rem !important;
+      height: 3.5rem !important;
       overflow: hidden;
       border-radius: 50% !important;
       position: relative;
@@ -282,7 +308,8 @@ h1,h2,h3,h4,h5,h6,p,span {
 
       span {
         position: absolute;
-        top: -15%;
+        top: -54%;
+        left: -40%;
         width: 6rem !important;
         height: 6rem !important;
         padding: 0px 20px !important;
@@ -290,7 +317,7 @@ h1,h2,h3,h4,h5,h6,p,span {
         align-items:  center !important;
         justify-content: center !important;
         font-family: cairo_light !important;
-      font-size: 60px !important;
+        font-size: 40px !important;
 
       }
     }
