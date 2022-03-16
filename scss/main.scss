@@ -106,6 +106,15 @@ h1,h2,h3,h4,h5,h6,p,span {
   @include media__max(1200){
     font-size: 3.5rem;
   }
+  @include media__max(991){
+    font-size: 3.2rem;
+  }
+  @include media__max(767){
+    font-size: 2.8rem;
+  }
+  @include media__max(510){
+    font-size: 2.2rem;
+  }
 }
 
 .btn__line {
@@ -423,6 +432,7 @@ h1,h2,h3,h4,h5,h6,p,span {
     p {
       padding: 4px 0px;
       width: 100%;
+      margin-bottom: 0.6rem;
       position: relative;
       &::before {
         position: absolute;
@@ -449,6 +459,9 @@ h1,h2,h3,h4,h5,h6,p,span {
     @include media__max(767){
       grid-template-columns: 23rem 23rem;
     }
+    @include media__max(600){
+      grid-template-columns: 50% 50%;
+    }
     @include media__max(500){
       overflow: hidden;
     }
@@ -460,10 +473,12 @@ h1,h2,h3,h4,h5,h6,p,span {
     background-color: $theme !important;
   }
   .accordion-header button {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
     border: 3px solid $sky;
     border-radius: 1.5rem !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
     padding-left: 4rem;
     &:focus {
       box-shadow: none;
@@ -549,6 +564,9 @@ footer {
   .package__frame {
     height: 35rem;
   }
+  .accordion-header button {
+    font-size: 2rem !important;
+  }
 }
 @include media__max(700){
   .package__7 {
@@ -579,6 +597,12 @@ footer {
       margin-bottom: 10px !important;
     }
   }
+  .accordion-header button {
+    font-size: 1.6rem !important;
+  }
+  .faqs .accordion-body {
+    font-size: 1.4rem !important;
+  }
 }
 @include media__max(770){
   .slick-prev {
@@ -592,10 +616,11 @@ footer {
   .faqs .accordion-header button {
     border-radius: 4rem !important;
   }
+
 }
 @include media__max(600){
-  body {
-    padding: 0px 13px;
+  .container {
+    padding: 0px 13px !important;
   }
   footer {
     background-image: none;
@@ -603,5 +628,24 @@ footer {
   }
   .filter__lists {
     padding: 0px 28px;
+  }
+  .package__prizing .btn {
+    font-size: 1.7rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+  .package__prize {
+    > h4 {
+      font-size: 2.5rem;
+    }
+  }
+  .mb-99 {
+    margin-bottom: 5rem;
+  }
+  .mt-99 {
+    margin-top: 5rem;
+  }
+  .display-6 {
+    font-size: 1.5rem;
   }
 }
