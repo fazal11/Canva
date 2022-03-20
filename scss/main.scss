@@ -42,6 +42,7 @@ body {
   background: $theme;
   color: white;
   font-family: cairo;
+  overflow-x: hidden;
 }
 body,* {
   padding: 0;
@@ -193,6 +194,9 @@ h1,h2,h3,h4,h5,h6,p,span {
 }
 .pb-99 {
   padding-bottom: 7.5rem;
+  @include media__max(767){
+   padding-bottom: 5rem;
+  }
 }
 
 .mb-65 {
@@ -225,31 +229,58 @@ h1,h2,h3,h4,h5,h6,p,span {
       font-size: 2.6rem;
     }
   }
-  &__7 {
-    width: 100rem;
-    img {
-      width: 90rem;
+  &__coin {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: -40%;
+      content: "";
+      width: 11rem;
+      height: 0.8rem;
+      background-image: url(../images/coin__line.svg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+    }
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: -40%;
+      content: "";
+      width: 11rem;
+      height: 0.8rem;
+      background-image: url(../images/coin__line.svg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+
+    }
+    @include media__max(1400){
+      &::after {
+        width: 10rem;
+      }
+      &::before {
+        width: 10rem;
+      }
+    }
+    @include media__max(1200){
+      &::after {
+        width: 9rem;
+        left: -40%;
+        background-size: 9rem;
+
+      }
+      &::before {
+        width: 9rem;
+        right: -40%;
+        background-size: 9rem;
+      }
     }
   }
-  &_row {
-
-  }
-  &_col {
-    width: 18.2rem;
-    text-align: center;
-    margin-right: 6rem;
-    margin-top: -4rem;
-  }
-  &_col_3 {
-    width: 20rem;
-    text-align: center;
-    margin-top: -4rem;
-  }
-  &_col_2 {
-    width: 25rem;
-    text-align: center;
-    margin-top: 2rem;
-  }
+  
 }
 // template 
 .template {
@@ -584,35 +615,7 @@ footer {
   .info__card {
     width: 20rem;
   }
-  .package__7 {
-    width: 70rem;
-    img {
-      width: 60rem;
-    }
-  }
-  .package_col {
-    width: 15rem;
-    margin-right: 2rem;
-    p {
-      font-size: 1.6rem;
-    }
-  }
-  .package_col_2 {
-    width: 15rem;
-    p {
-      font-size: 1.6rem;
-    }
-  }
-  .package_col_3 {
-    width: 13rem;
-    p {
-      font-size: 1.5rem;
-    }
-    div {
-      font-size: 1.3rem;
-
-    }
-  }
+  
 }
 @include media__max(991){
   .package__frame {
@@ -623,9 +626,7 @@ footer {
   }
 }
 @include media__max(700){
-  .package__7 {
-    display: none;
-  }
+
 }
 @include media__max(767){
   .info__card {
@@ -690,7 +691,11 @@ footer {
   }
   .filter__lists {
     grid-template-columns: 46% 46%;
-    padding: 0px 28px;
+    margin: 0px 28px;
+    padding-left: 22px;
+  }
+  .filter__item p {
+    padding-right: 5px;
   }
   .package__prizing .btn {
     font-size: 1.7rem;
@@ -713,5 +718,99 @@ footer {
   }
   .mb-6 {
     margin-bottom: 2rem;
+  }
+}
+
+
+@include media__max(1400){
+  .chat__img {
+    height: 34rem;
+  }
+}
+@include media__max(1200){
+  .chat__img {
+    height: 39rem;
+  }
+}
+@include media__max(991){
+  .chat__img {
+    height: 28rem;
+  }
+}
+@include media__max(767){
+  .chat__img {
+    height: 31.5rem;
+  }
+
+}
+@include media__max(600){
+  .chat__img {
+    height: 30rem;
+  }
+}
+@include media__max(575){
+  .chat__img {
+    height: 40rem;
+    width: 27rem;
+    margin: auto;
+  }
+  .mobo__fix_w {
+    width: 27rem;
+    margin: auto;
+  }
+  .chat__img_layout {
+    margin-bottom: 2rem;
+  }
+}
+
+
+[data-aos="fade-up"] {
+  @media screen and (max-width: 767px) {
+    transform: translateZ(0) !important;
+    overflow: hidden;
+
+    &.aos-animate {
+      transform: translateZ(0) !important;
+    }
+  }
+}
+[data-aos="flip-down"] {
+  @media screen and (max-width: 767px) {
+    transform: translateZ(0) !important;
+    overflow: hidden;
+
+    &.aos-animate {
+      transform: translateZ(0) !important;
+    }
+  }
+}
+[data-aos="fade-down"] {
+  @media screen and (max-width: 767px) {
+    transform: translateZ(0) !important;
+    overflow: hidden;
+
+    &.aos-animate {
+      transform: translateZ(0) !important;
+    }
+  }
+}
+[data-aos="fade-left"] {
+  @media screen and (max-width: 767px) {
+    transform: translateZ(0) !important;
+    overflow: hidden;
+
+    &.aos-animate {
+      transform: translateZ(0) !important;
+    }
+  }
+}
+[data-aos="fade-right"] {
+  @media screen and (max-width: 767px) {
+    transform: translateZ(0) !important;
+    overflow: hidden;
+
+    &.aos-animate {
+      transform: translateZ(0) !important;
+    }
   }
 }
