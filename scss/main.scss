@@ -56,7 +56,7 @@ body,* {
       background: $theme;
       width: 7px !important;
   }
-    /* Style the scrollbar handle */
+  /* Style the scrollbar handle */
   ::-webkit-scrollbar-thumb {
   background: $sky;
   }
@@ -83,6 +83,9 @@ a {
 }
 h1,h2,h3,h4,h5,h6,p,span {
   margin-bottom: 0;
+}
+hr {
+  background-color: #9b9a9d;
 }
 .rounded-1 {
   border-radius: .6rem !important;
@@ -128,7 +131,7 @@ h1,h2,h3,h4,h5,h6,p,span {
 }
 
 .btn__line {
-  border: 2px solid $sky;
+  border: 3px solid $sky;
   border-radius: 1rem;
   width: 40px;
   padding: 4px 0px;
@@ -170,7 +173,7 @@ h1,h2,h3,h4,h5,h6,p,span {
 }
 .move {
   width: 5rem;
-  margin-top: -25%;
+  margin-top: -50%;
 }
 .w-fit {
   width: fit-content;
@@ -424,15 +427,15 @@ h1,h2,h3,h4,h5,h6,p,span {
 .slick-next::before {
   content: '\203A' !important;
   position: absolute;
-  top: -17px;
-  right: -15px;
+  top: -18px;
+  right: -14px;
 }
 
 .slick-prev::before {
   content: '\2039' !important;
   position: absolute;
-  top: -17px;
-  right: -15px;
+  top: -18px;
+  right: -14px;
 }
 
 
@@ -520,7 +523,7 @@ h1,h2,h3,h4,h5,h6,p,span {
     font-size: 2.5rem;
     color: white;
     border: 3px solid $sky;
-    border-radius: 1.5rem !important;
+    border-radius: 1rem !important;
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
     padding-left: 4rem;
@@ -736,6 +739,9 @@ footer {
   .chat__img {
     height: 28rem;
   }
+  body {
+    overflow-x: hidden !important;
+  }
 }
 @include media__max(767){
   .chat__img {
@@ -746,6 +752,9 @@ footer {
 @include media__max(600){
   .chat__img {
     height: 30rem;
+  }
+  br {
+    display: none;
   }
 }
 @include media__max(575){
@@ -760,57 +769,5 @@ footer {
   }
   .chat__img_layout {
     margin-bottom: 2rem;
-  }
-}
-
-
-[data-aos="fade-up"] {
-  @media screen and (max-width: 767px) {
-    transform: translateZ(0) !important;
-    overflow: hidden;
-
-    &.aos-animate {
-      transform: translateZ(0) !important;
-    }
-  }
-}
-[data-aos="flip-down"] {
-  @media screen and (max-width: 767px) {
-    transform: translateZ(0) !important;
-    overflow: hidden;
-
-    &.aos-animate {
-      transform: translateZ(0) !important;
-    }
-  }
-}
-[data-aos="fade-down"] {
-  @media screen and (max-width: 767px) {
-    transform: translateZ(0) !important;
-    overflow: hidden;
-
-    &.aos-animate {
-      transform: translateZ(0) !important;
-    }
-  }
-}
-[data-aos="fade-left"] {
-  @media screen and (max-width: 767px) {
-    transform: translateZ(0) !important;
-    overflow: hidden;
-
-    &.aos-animate {
-      transform: translateZ(0) !important;
-    }
-  }
-}
-[data-aos="fade-right"] {
-  @media screen and (max-width: 767px) {
-    transform: translateZ(0) !important;
-    overflow: hidden;
-
-    &.aos-animate {
-      transform: translateZ(0) !important;
-    }
   }
 }

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/slick-theme.min.css">
     <link rel="stylesheet" href="css/slick.min.css">
-    <link rel="stylesheet" href="css/animation.css">
+    <!-- <link rel="stylesheet" href="css/animation.css"> -->
     <title>HOME!</title>
   </head>
   <body>
@@ -47,11 +47,11 @@
             <div class="banner__ceo" data-aos="fade-up">
               <img class="w-100" src="images/canva-ceo.svg" alt="canva-ceo">
             </div>
-            <div class="row d-none d-lg-flex">
-              <div class="col-3 offset-3 offset-xl-4">
+            <div class="row d-none d-lg-flex" style="width: 45vw; margin-left: -7rem;">
+              <div class="col-3 mt-3 offset-3 offset-xl-4">
                 <div class="banner__arrow">
                   <div class="move mx-4">
-                    <a href="#">
+                    <a href="#frame">
                     <img class="w-100" src="images/down-arrow.png" alt="">
                     </a>
                   </div>
@@ -65,7 +65,7 @@
           <div class="col text-center">
             <div class="banner__arrow">
               <div class="move mx-auto">
-                <a href="#">
+                <a href="#frame">
                 <img class="w-100" src="images/down-arrow.png" alt="">
                 </a>
               </div>
@@ -74,7 +74,7 @@
         </div>
       </div>
     </section>
-    <section class="package pt-5 pb-md-5">
+    <section class="package pt-5 pb-md-5" id="frame">
       <div class="container px-0">
         <div class="row mx-0">
           <div class="col-lg-8 px-0 mx-auto">
@@ -380,8 +380,8 @@
       <div class="container">
         <div class="row my-5">
           <div class="col-md-10 px-5 mb-6">
-            <div class="btn__line px-5 py-2 "></div>
-            <h4 class="text-lg fw-bold mb-3">
+            <div class="btn__line px-5 py-2 mx-auto mx-md-0"></div>
+            <h4 class="text-lg fw-bold mb-5 text-md-start text-center">
               Quem comprou recomenda muito, vejam <br>
               o que falam sobre nós
             </h4>
@@ -1396,10 +1396,10 @@ NAMORADOS
           </div>
         </div>
         <div class="row justify-content-center my-5">
-          <div class="col-md-3 text-md-center text-footer font_base">
+          <div class="col-md-3 text-center text-footer font_base">
             Termos de uso
           </div>
-          <div class="col-md-3 text-footer font_base">
+          <div class="col-md-3 text-footer text-center font_base">
             Licença Comercial de uso
           </div>
         </div>
@@ -1410,12 +1410,6 @@ NAMORADOS
     <script src="js/slick.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/animation.js"></script>
-    <script>
-      AOS.init({
-        duration: 1200,
-        startEvent: 'DOMContentLoaded',
-      });
-    </script>
+
   </body>
 </html>
