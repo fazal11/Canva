@@ -242,6 +242,9 @@ hr {
       width: 9rem;
       right: -40%;
       background-size: 9rem; } }
+  @media only screen and (max-width: 991px) {
+    .package__coin {
+      overflow: hidden; } }
 
 .template__img {
   width: 86%;

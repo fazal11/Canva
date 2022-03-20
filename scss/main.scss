@@ -282,6 +282,9 @@ hr {
         background-size: 9rem;
       }
     }
+    @include media__max(991){
+      overflow: hidden;
+    }
   }
   
 }
